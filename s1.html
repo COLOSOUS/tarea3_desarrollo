@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+	<html>
+	    <head>
+
+			<button onclick="window.location.href = 'tablamedico.html';">Volver a la tabla</button><br>
+	        <title>Informacion del solicitante.</title>
+			<meta charset="utf-8">
+			<link rel="stylesheet" href="zoom.css">
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+			<script>
+			$(document).ready(function(){
+				$('.zoom').hover(function() {
+					$(this).addClass('transition');
+				}, function() {
+					$(this).removeClass('transition');
+				});
+			});
+			</script>
+	    </head>
+	    <body>
+		<h2>Nombre solicitante:</h2><td>Huda Chadwick</td>
+		<h2>Especialidad:</h2> <td>Reumatología</td>
+		<h2>Comuna:</h2><td>Las Condes</td>
+		<h2>Correo:</h2><td>Huda@gmail.com<br>
+		<h2>Telefono:</h2><td>+56955542112</td>
+		<h2>Twiter:</h2><td>@Huda</td><br><br><br><br>
+
+
+
+
+
+
+
+		<h3>Foto:              </h3><img src="p1.png" alt="" width="320" height="240"  class="zoom"/><br><br><br><br>
+
+
+	    </body>
+	</html>

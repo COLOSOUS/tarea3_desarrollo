@@ -1,0 +1,208 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+</head>
+
+<body>
+  <button onclick="window.location.href = 'index.html';">Volver a la pagina inicio</button><br>
+
+  <script>
+  var clicks = 0;
+  function myFunction() {
+      var espacio = document.createElement("br");
+      var btn = document.createElement("input");
+      var t = document.createTextNode("Examinar");
+      document.body.appendChild(espacio);
+      if (clicks < 4) {
+        clicks += 1;
+      btn.appendChild(t);
+      document.body.appendChild(btn);
+
+      btn.setAttribute("type", "file");
+    }
+      else{
+      btn.setAttribute(alert("No puede agregar mas imagenes"));
+      }
+  }
+  </script>
+
+  <script>
+  var espacio = document.createElement("br");
+  var myParent = document.body;
+  var clicks2 = 0;
+  var array = ["twitter","instagram","facebook","tiktok ","otra"];
+  function myFunction2() {
+      myParent.appendChild(espacio);
+      var btn = document.createElement("input");
+      var t = document.createTextNode("Red social");
+      //Create and append select list
+      var selectList = document.createElement("select");
+      selectList.id = "mySelect";
+      myParent.appendChild(selectList);
+      document.body.appendChild(espacio);
+
+    //Create and append the options
+
+
+      if (clicks2 < 4) {
+        clicks2 += 1;
+      btn.appendChild(t);
+      btn.setAttribute("type", "text");
+      for (var i = 0; i < array.length; i++) {
+          var option = document.createElement("option");
+          option.value = array[i];
+          option.text = array[i];
+          selectList.appendChild(option);
+      }
+      document.body.appendChild(btn);
+
+
+    }
+      else{
+      btn.setAttribute(alert("No puede agregar mas links"));
+      }
+  }
+  </script>
+
+
+
+  <!-- Add your site or application content here -->
+  <p>Formulario para inscribir un evento</p>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+
+  </script>
+
+  <form enctype="multipart/form-data" id="myform" method="post" action="cgi-bin/save_event.py" >
+
+
+
+  <title> ¿Dónde?:</title>
+  <br>
+  Región:<select id="regiones"></select>
+  Comuna:<select id="comunas"></select>
+  <br>
+  Sector: <input type="text" maxlength="5" name="sector" >
+  <br>
+  <title> ¿Quién ofrece?:
+</title>
+  Nombre : <input type="text" length="100" maxlength="200" name="nombre" >
+  <br>
+  Email : <input type="email" length="100"  name="email" >
+  <br>
+  Número de celular : <input type="number" length="15"  name="celular" >
+  <br>
+  Red/es social/es:
+      <input type="text" name="red-social">
+
+        <select name="red-social" >
+          <option value="twitter"> twitter</option>
+          <option value="instagram"> instagram</option>
+          <option value="facebook"> facebook</option>
+          <option value="tiktok"> tiktok</option>
+          <option value="twitter">  otra</option>
+          </select>
+  <br>
+   </form>
+  <button onclick="myFunction2()">Agregar red social</button>
+
+  <form>
+    <title> ¿Cuándo y qué se ofrece?:
+</title>
+    Día hora inicio : <input type="datetime-local"   name="dia-hora-inicio" >
+    Día hora término : <input type="datetime-local"   name="dia-hora-termino"  >
+    <br>
+    Descripcion: <input type="text"  name="descripcion-evento" size="50" style="padding-bottom:100px ;">
+   </form>
+  <br>
+  Tipo de comida: <select name="tipo-comida" >
+    <option value="0">Al Paso</option>
+<option value="0">Alemana</option>
+ <option value="0">Árabe</option>
+<option value="0">Argentina</option>
+<option value="0"> Asiática</option>
+<option value="0">Australiana</option>
+<option value="0">Brasileña</option>
+<option value="0"> Café y Snacks</option>
+<option value="0">Carnes</option>
+<option value="0">Casera</option>
+<option value="0"> Chilena</option>
+<option value="0">China</option>
+<option value="0"> Cocina de Autor</option>
+<option value="0"> Comida Rápida</option>
+<option value="0"> Completos</option>
+<option value="0">Coreana</option>
+<option value="0"> Cubana</option>
+<option value="0">Española</option>
+ <option value="0">Exótica</option>
+<option value="0">Francesa</option>
+<option value="0"> Gringa</option>
+<option value="0">Hamburguesa</option>
+<option value="0">Helados</option>
+ <option value="0">India</option>
+<option value="0">Internacional</option>
+<option value="0">Italiana</option>
+<option value="0">Latinoamericana</option>
+<option value="0">Mediterránea</option>
+<option value="0">Mexicana</option>
+<option value="0">Nikkei</option>
+<option value="0">Parrillada</option>
+<option value="0"> Peruana</option>
+<option value="0">Pescados y mariscos</option>
+<option value="0">Picoteos</option>
+<option value="0">Pizzas</option>
+ <option value="0">Pollos y Pavos</option>
+<option value="0">Saludable</option>
+<option value="0">Sándwiches</option>
+<option value="0"> Suiza</option>
+<option value="0">Japonesa</option>
+<option value="0"> Sushi</option>
+<option value="0">Tapas</option>
+<option value="0">Thai</option>
+<option value="0">Vegana</option>
+<option value="0">Vegetariana</option>
+    </select>
+<br>
+  Fotos: <input type="file" name="foto-comida" accept="image/png, image/jpeg">
+
+
+
+
+  <button onclick="myFunction()">Agregar imagen</button>
+
+
+  <br><br>
+
+  <br>
+  <form action="" method="post">
+  <input type="submit" value="Enviar">
+  </form>
+
+
+
+</body>
+
+</html>
